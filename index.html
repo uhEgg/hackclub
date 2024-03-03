@@ -204,8 +204,10 @@
         const cursor = document.getElementById('cursor');
 
         document.addEventListener('mousemove', (e) => {
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
+            const x = e.clientX;
+            const y = e.clientY;
+            cursor.style.left = x + 'px';
+            cursor.style.top = y + 'px';
         });
 
         // Button hover effect for cursor
