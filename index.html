@@ -202,13 +202,14 @@
 
         // Custom cursor
         const cursor = document.getElementById('cursor');
-
+        
         document.addEventListener('mousemove', (e) => {
-            const x = e.clientX;
-            const y = e.clientY;
+            const x = e.clientX + window.pageXOffset;
+            const y = e.clientY + window.pageYOffset;
             cursor.style.left = x + 'px';
             cursor.style.top = y + 'px';
         });
+
 
         // Button hover effect for cursor
         const buttons = document.querySelectorAll('.button');
